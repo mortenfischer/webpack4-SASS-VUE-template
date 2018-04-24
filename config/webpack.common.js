@@ -10,15 +10,14 @@ const extractSass = new ExtractTextPlugin({
 
 module.exports = {
     entry: {
-        app: './src/index.js',
+        app: './src/js/index.js',
         polyfill: 'babel-polyfill',
-        styling: './src/style.scss'
+        styling: './src/scss/style.scss'
     },
     output: {
         //filename: '[name].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, '../build')
     },
-    mode: "development",
     module: {
         rules: [
             {
