@@ -1,5 +1,5 @@
 <template>
-  <h2>This is a vue template</h2>
+  <h2>This is a vue template with hot reload</h2>
 </template>
 
 <script>
