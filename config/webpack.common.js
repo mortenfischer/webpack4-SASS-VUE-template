@@ -11,9 +11,8 @@ const extractSass = new ExtractTextPlugin({
 
 module.exports = {
     entry: {
-        app: './src/js/index.js',
-        polyfill: 'babel-polyfill',
-        styling: './src/scss/style.scss'
+        app: './src/index.js',
+        styling: './src/style.scss'
     },
     output: {
         //filename: '[name].js',
@@ -33,7 +32,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env'] // webpack docs is wrong here, it suggests using @babel/preset-env which is wrong
+                        presets: ['@babel/preset-env'] 
                     }
                 }
             },

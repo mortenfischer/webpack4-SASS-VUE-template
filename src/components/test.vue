@@ -8,9 +8,3 @@ export default {
 }
 </script>
 
-<style lang="scss">
-H2{
-    color: blue !important;
-    font-size: 2rem;
-}
-</style>

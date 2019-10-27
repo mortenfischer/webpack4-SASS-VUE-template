@@ -1,6 +1,5 @@
-import doConsole from "./modules/logSomething"
 import Vue from 'vue'
-import Start from "./modules/test.vue"
+import Start from './components/test'
 
 new Vue({
     el: '#vue-app',
