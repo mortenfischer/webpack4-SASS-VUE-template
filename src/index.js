@@ -1,17 +1,3 @@
-import Vue from 'vue'
-import Start from './components/test'
+import './components/test/test.init'
+import './components/inline-test/inline-test.init'
 
-new Vue({
-    el: '#vue-app',
-    components: { Start },
-    template: '<Start/>'
-  })
-
-new Vue({
-    el:"#inline-vue-app",
-    data: function(){
-        return {
-            type : "funky inline"
-        }
-    }
-})

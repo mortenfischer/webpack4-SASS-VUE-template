@@ -1,5 +1,5 @@
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require('vue-loader');
 
 const extractSass = new ExtractTextPlugin({
@@ -16,7 +16,7 @@ module.exports = {
     },
     output: {
         //filename: '[name].js',
-        path: path.resolve(__dirname, '../build')
+        path: path.resolve(__dirname, '../public')
     },
     resolve: {
         alias: {
@@ -53,16 +53,14 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                exclude: [
-                    path.resolve(__dirname, "../src/js")
-                ],
-                use: extractSass.extract({
-                    use: [{
-                        loader: "css-loader"
-                    },{
-                        loader: "sass-loader"
-                    }]
-                })
+                use: [
+                    {
+                    loader: ExtractTextPlugin.loader,
+                        options: {},
+                    },
+                    'css-loader',
+                    "sass-loader"
+                ]
             }
         ]
     },
