@@ -1,14 +1,13 @@
 {
-  "name": "HOFORForsynometer",
+  "name": "vue2_sass",
   "version": "1.0.0",
-  "description": "Kundeportal til målerdata og energioptimering",
-  "main": "index.js",
+  "description": "",
+  "browser": "app.js",
   "scripts": {
     "start": "webpack-dev-server --open --config ./config/webpack.dev.js",
     "build": "webpack --config ./config/webpack.prod.js"
   },
-  "author": "Morten Fischer",
-  "license": "MIT",
+  "author": "Morten Fischer - Immeo <mfi@immeo.dk>",
   "devDependencies": {
     "@babel/core": "7.6.4",
     "@babel/preset-env": "7.6.3",
