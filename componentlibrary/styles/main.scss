@@ -1,0 +1,131 @@
+@import './normalize.css';
+@import './variables';
+@import './svgs';
+@import './fonts';
+
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+
+span, p {
+    font-family: "Volte-Regular", Arial, Helvetica, sans-serif;
+    color: $color-primary;
+    margin: 0;
+}
+
+.clib-button {
+    border: none;
+    font-family: 'Volte-Regular', Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.clib-page-title {
+    font-family: 'Volte-Semibold', Arial, Helvetica, sans-serif;
+    color: $color-primary;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.clib-page-table {
+    background-color: transparent;
+    border: none;
+    resize: none;
+    font-family: 'Volte-Regular', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.clib-main-logo {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 460px;
+    margin-top: 60px;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        max-width: 230px;
+    }
+
+    &__text {
+        font-family: 'Volte-Medium', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: $color-primary;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            font-size: 16px;
+            max-width: 100px;
+            line-height: 1.4;
+        }
+    }
+}
+
+.clib-spacer {
+    width: 1.5px;
+    height: 20px;
+    background-color: $color-spacer-grey;
+    transition: all 0.2s ease-in-out;
+
+    &--main-logo {
+        margin: 0 20px;
+        width: 2px;
+        height: 24px;
+        background-color: $color-primary;
+    }
+
+    &--title-container {
+        margin: 5px 0 10px 4px;
+        transform: rotate(90deg);
+        margin-left: 10px;
+
+        @media screen and (max-width: $breakpoint-desktop) {
+            transform: rotate(0deg);
+            margin: 7px 20px 0 20px;
+        }
+    }
+
+    &--card {
+        margin-right: 28px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.glide {
+    cursor: default;
+    transition: all 0.2s ease-in-out;
+}
+
+.glide__track {
+    transition: all 0.2s ease-in-out;
+}
+
+
+@import './components/clib-footer';
+@import './components/clib-component-select-buttons';
+@import './components/clib-component-api';
+@import './components/clib-component-markup';
+@import './components/clib-component-view';
+@import './components/clib-components-overview';
+@import './components/clib-title-container';
+@import './components/clib-navigation';
+
+
+
+
+
+
+
+
+
+
+
+
+
+

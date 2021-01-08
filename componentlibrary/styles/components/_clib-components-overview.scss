@@ -1,0 +1,159 @@
+.clib-components {
+    background-color: $color-background-grey;
+    border-top: 1px solid $color-spacer-grey;
+    border-bottom: 1px solid $color-spacer-grey;
+    margin-top: 80px;
+    min-height: 75vh;
+    @media screen and (max-width: $breakpoint-desktop) {
+        margin-top: 60px;
+    }
+
+    &__wrapper {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: calc(1440px + 40px);
+        padding: 80px 20px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: $breakpoint-desktop) {
+            flex-direction: column;
+            padding: 40px 20px;
+        }
+    }
+
+    &__grid {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1180px;
+        margin: 0 -10px;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            width: initial;
+        }
+    }
+
+    &__card {
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        width: calc((100% / 3) - 20px);
+        background-color: $color-white;
+        border-radius: 5px;
+        margin: 10px;
+        min-height: 90px;
+        display: flex;
+        height: fit-content;
+        font-weight: 500;
+        font-family: 'Volte-Medium', Arial, Helvetica, sans-serif;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            width: calc((100% / 2) - 20px);
+        }
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: 100%;
+        }
+
+        &:hover {
+            -webkit-box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.03);
+            -moz-box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.03);
+            box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.03);
+            transition: all 0.15s ease-in-out;
+
+            .clib-components__card-id-container:after {
+                content: "";
+                height: 100%;
+                width: 90px;
+                background-color: $color-primary;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .clib-components__card-id {
+                color: $color-white;
+            }
+
+            .clib-spacer--card {
+                background-color: $color-secondary;    
+                height: 1px;
+                opacity: 0;
+            }
+
+            .clib-components__card-title {
+                color: $color-secondary;
+                margin-left: 34px;
+            }
+
+            .clib-components__card-hover-arrow {
+                opacity: 1;
+                right: 30px;
+            }
+        }
+
+        &:focus {
+            box-shadow: 0 0 2pt 1pt $color-focus;
+            outline: none;
+        }
+    }
+
+    &__card-id {
+        font-size: 24px;
+        color: $color-text-grey;
+        margin: 0;
+        z-index: 3;
+        transition: color 0.2s ease-in-out;
+        margin-top: 1px;
+    }
+
+    &__card-id-container {
+        width: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:after {
+            content: "";
+            height: 100%;
+            width: 0;
+            background-color: $color-primary;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.18s ease-in-out;
+            z-index: 2;
+            border-radius: 5px 0 0 5px;
+        }
+    }
+
+    &__card-title {
+        max-width: 200px;
+        font-size: 20px;
+        color: $color-primary;
+        margin: 0 0 0 28px;
+        transition: all 0.25s ease-in-out;
+        line-height: 1.3;
+    }
+
+     &__card-title-container {
+        padding: 32px 30px 27px 0;
+        display: flex;
+    }
+
+    &__card-hover-arrow {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        transform: rotate(180deg);
+        opacity: 0;
+        transition: all 0.15s ease-in-out;
+        
+        svg {
+            fill: $color-secondary;
+        }
+    }
+}

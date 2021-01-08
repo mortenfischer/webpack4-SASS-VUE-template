@@ -1,0 +1,37 @@
+.clib-title-container {
+    margin-top: 5px;
+
+    @media screen and (max-width: $breakpoint-desktop) {
+        margin-bottom: 20px;
+        display: flex;
+    }
+
+    &__title {
+        font-family: 'Volte-Semibold', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        color: $color-primary;
+        margin: 0;
+        width: 260px;
+
+        @media screen and (max-width: $breakpoint-desktop) {
+            width: initial;
+        }
+    }
+
+    &__component-amount {
+        font-family: 'Volte-Medium', Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+
+        @media screen and (max-width: $breakpoint-desktop) {
+            margin-top: 6px;
+            margin-left: 5px;
+        }
+    }
+}
+
+
+
+
+

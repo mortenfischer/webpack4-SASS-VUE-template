@@ -1,12 +1,86 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Webpack basic template</title>
-        <link rel="stylesheet" href="/assets/styling.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/clibstyles.css">
+        <title>Component Library</title>
     </head>
-    <body>
-        <h1>Webpack basic template</h1>
-        <div id="vue-app"></div>
-        <script src="/assets/app.js"></script>
+<body>
+    <nav class="clib-navigation">
+            <div class="clib-navigation__container">
+                <a class="clib-navigation__home"
+                   href="/">
+                        <!-- CHANGE TO CLIENT LOGO  -->
+                        <img src="https://www.immeo.dk/globalassets/images/logos-and-icons/logo-header.svg">
+                </a>
+                <!--div class="clib-navigation__demo-mode">
+                    <span class="clib-navigation__demo-mode-text">Demo mode</span>
+                    <label class="clib-navigation__switch">
+                        <input type="checkbox">
+                        <span class="clib-navigation__slider"></span>
+                    </label>
+                </div-->
+            </div>
+        </nav>    <div class="body-container">
+        <article class="clib-main-logo">
+            <h1 class="clib-main-logo__text">Component Library </h1>
+        </article>        <section class="clib-components">
+            <div class="clib-components__wrapper">
 
-    </body>
+                <h2 class="clib-title-container">
+                    <span class="clib-title-container__title">Components</span>
+                    <!--div class="clib-spacer clib-spacer--title-container"></div-->
+                    <!--span class="clib-title-container__component-amount">(5)</span-->
+                </h2>
+
+                <div class="clib-components__grid">
+
+                    <a href="/components/test-component.html" class="clib-components__card" tabindex="0">
+                        <div class="clib-components__card-id-container">
+                            <h3 class="clib-components__card-id">M01</h3>
+                        </div>
+                        <div class="clib-components__card-title-container">
+                            <span class="clib-spacer clib-spacer--card"></span>
+                            <h2 class="clib-components__card-title">Test Component</h2>
+                        </div>
+                        <div class="clib-svg-container__small clib-components__card-hover-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" />
+                            </svg>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="clib-footer">
+        <div class="clib-svg-container__medium">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 124 174">
+                <g id="Immeo_5element_pos_rgb"
+                    transform="translate(0 -7.925)">
+                    <rect id="Rectangle_8"
+                            data-name="Rectangle 8"
+                            width="41.532"
+                            height="170.892"
+                            transform="translate(79.968 9.3)"
+                            fill="none"
+                            stroke="#6b6b6b"
+                            stroke-width="3" />
+                    <path id="Path_1"
+                            data-name="Path 1"
+                            d="M56.117,173.058A28.058,28.058,0,1,1,28.1,145a28.062,28.062,0,0,1,28.015,28.058"
+                            transform="translate(0 -18.693)"
+                            fill="#6b6b6b" />
+                </g>
+            </svg>
+        </div>
+        <p>Frontend by Immeo P/S</p>
+        <p>2020</p>
+    </footer>
+    <script src="/assets/clibapp.js"></script></body>
+
 </html>

@@ -1,0 +1,16 @@
+.clib-footer {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    background-color: $color-white;
+    z-index: 2;
+    position: relative;
+    
+    p {
+        color: $color-text-grey;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

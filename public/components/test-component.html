@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/clibstyles.css">
+    <title>Component Library</title>
+</head>
+
+<body>
+    
+    <nav class="clib-navigation">
+            <div class="clib-navigation__container">
+                <a href="/" class="clib-navigation__return"
+                        tabindex="0">
+                    <div class="clib-navigation__return-svg clib-svg-container__small">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 320 512">
+                            <path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" /></svg>
+                    </div>
+                    <span class="clib-navigation__return-text">Component Library</span>
+                </a>
+                <a class="clib-navigation__home"
+                   href="/">
+                        <!-- CHANGE TO CLIENT LOGO  -->
+                        <img src="https://www.immeo.dk/globalassets/images/logos-and-icons/logo-header.svg">
+                </a>
+                <!--div class="clib-navigation__demo-mode">
+                    <span class="clib-navigation__demo-mode-text">Demo mode</span>
+                    <label class="clib-navigation__switch">
+                        <input type="checkbox">
+                        <span class="clib-navigation__slider"></span>
+                    </label>
+                </div-->
+            </div>
+        </nav>
+    <div class="body-container">
+        <div class="clib-component">
+            <div class="glide">
+                <section class="clib-select-button__container" data-glide-el="controls[nav]">
+                    <div class="clib-select-button__selected-visual"></div>
+                    <button data-glide-dir="=0" class="clib-button clib-select-button clib-select-button--selected" id="view">View</button>
+                    <button data-glide-dir="=1" class="clib-button clib-select-button" id="api">API</button>
+                    <button data-glide-dir="=2" class="clib-button clib-select-button" id="markup">Markup</button>
+                </section>
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+
+                        <li class="glide__slide">
+                            <!-- change inline styles to adjust element inside window  -->
+                            <div class="clib-window clib-window--demo-active"
+                                     style="max-width: 500px; padding: 60px;">
+                                <article>
+                                    Component markup
+                                </article>                            </div>
+                        </li>
+
+                        <li class="glide__slide">
+                             <section class="clib-api">
+                                <article class="clib-api__container">
+                                    <h1 class="clib-page-title">CreateUser</h1>
+                                    <table class="clib-api__table">
+                                        <tr>
+                                            <th>method</th>
+                                            <th>endpoint</th>
+                                            <th>request body</th>
+                                            <th>response</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="clib-api__table-item--method">
+                                                <div class="clib-api__table-item">POST</div>
+                                            </td>
+                                            <td class="clib-api__table-item--endpoint">
+                                                <div class="clib-api__table-item">/api/customer/create-user/{costumerId}</div>
+                                            </td>
+                                            <td class="clib-api__table-item--request-body">
+                                                <textarea class="clib-api__table-item clib-page-table clib-api__table-text-area"
+                                                        disabled>
+                                                {
+                                                    "customerId": 4565432,
+                                                    "userInformation": {
+                                                        "name": "fsdfsefsef",
+                                                        "email": "morten@grafisch.dk",
+                                                        "mobile": "2342532435",
+                                                        "role": "3"
+                                                    }
+                                                }</textarea>
+                                            </td>
+                                            <td class="clib-api__table-item--response">
+                                                <textarea class="clib-api__table-item clib-page-table clib-api__table-text-area"
+                                                        disabled>
+                                                    {
+                                                        "userDetails" : {
+                                                            "name": "Flemming Brugersen",
+                                                            "email": "flbr@testbruger.dk",
+                                                            "role": "Driftschef",
+                                                            "installations" : [
+                                                                "Taasingegade 21, 1606
+                                                                København V"
+                                                            ]
+                                                        },
+                                                        "userDetails" : {
+                                                            "name": "Flemming Brugersen",
+                                                            "email": "flbr@testbruger.dk",
+                                                            "role": "Driftschef",
+                                                            "installations" : [
+                                                                "Taasingegade 21, 1606
+                                                                København V"
+                                                            ]
+                                                        }
+                                                    }
+                                                </textarea>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </article>
+                                <article class="clib-api__container">
+                                    <h1 class="clib-page-title">CreateUser</h1>
+                                    <table class="clib-api__table">
+                                        <tr>
+                                            <th>method</th>
+                                            <th>endpoint</th>
+                                            <th>request body</th>
+                                            <th>response</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="clib-api__table-item--method">
+                                                <div class="clib-api__table-item">POST</div>
+                                            </td>
+                                            <td class="clib-api__table-item--endpoint">
+                                                <div class="clib-api__table-item">/api/customer/create-user/{costumerId}</div>
+                                            </td>
+                                            <td class="clib-api__table-item--request-body">
+                                                <textarea class="clib-api__table-item clib-page-table clib-api__table-text-area"
+                                                        disabled>
+                                                {
+                                                    "customerId": 4565432,
+                                                    "userInformation": {
+                                                        "name": "fsdfsefsef",
+                                                        "email": "morten@grafisch.dk",
+                                                        "mobile": "2342532435",
+                                                        "role": "3"
+                                                    }
+                                                }</textarea>
+                                            </td>
+                                            <td class="clib-api__table-item--response">
+                                                <textarea class="clib-api__table-item clib-page-table clib-api__table-text-area"
+                                                        disabled>
+                                                    {
+                                                        "userDetails" : {
+                                                            "name": "Flemming Brugersen",
+                                                            "email": "flbr@testbruger.dk",
+                                                            "role": "Driftschef",
+                                                            "installations" : [
+                                                                "Taasingegade 21, 1606
+                                                                København V"
+                                                            ]
+                                                        },
+                                                        "userDetails" : {
+                                                            "name": "Flemming Brugersen",
+                                                            "email": "flbr@testbruger.dk",
+                                                            "role": "Driftschef",
+                                                            "installations" : [
+                                                                "Taasingegade 21, 1606
+                                                                København V"
+                                                            ]
+                                                        }
+                                                    }
+                                                </textarea>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </article>
+                            </section>
+                        </li>
+
+                        <li class="glide__slide">
+                            <section class="clib-markup">
+                                <article>
+                                    <h1 class="clib-page-title">Developer note :</h1>
+                                    <textarea class="clib-page-table clib-markup__short-table copyFromNotes">123123</textarea>
+                                    <button class="clib-button clib-markup__copy-button copyToClipboard"
+                                            id="copyFromNotes">
+                                        <div class="clib-svg-container__button clib-markup__copy-svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 448 512">
+                                                <path d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z" /></svg>
+                                        </div>
+                                        <div class="clib-svg-container__checkmark clib-markup__checkmark-svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" /></svg>
+                                        </div>
+                                        <p class="clib-markup__copy-button-text">copy</p>
+                                    </button>
+                                </article>
+                                <article>
+                                    <h1 class="clib-page-title">Markup to copy :</h1>
+                                    <textarea class="clib-page-table clib-markup__long-table copyFromMarkup"><article>
+    Component markup
+</article></textarea>
+                                    <button class="clib-button clib-markup__copy-button copyToClipboard"
+                                            id="copyFromMarkup">
+                                        <div class="clib-svg-container__button clib-markup__copy-svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 448 512">
+                                                <path d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z" /></svg>
+                                        </div>
+                                        <div class="clib-svg-container__checkmark clib-markup__checkmark-svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" /></svg>
+                                        </div>
+                                        <p class="clib-markup__copy-button-text">copy</p>
+                                    </button>
+                                </article>
+                            </section>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="clib-footer">
+        <div class="clib-svg-container__medium">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 124 174">
+                <g id="Immeo_5element_pos_rgb"
+                    transform="translate(0 -7.925)">
+                    <rect id="Rectangle_8"
+                            data-name="Rectangle 8"
+                            width="41.532"
+                            height="170.892"
+                            transform="translate(79.968 9.3)"
+                            fill="none"
+                            stroke="#6b6b6b"
+                            stroke-width="3" />
+                    <path id="Path_1"
+                            data-name="Path 1"
+                            d="M56.117,173.058A28.058,28.058,0,1,1,28.1,145a28.062,28.062,0,0,1,28.015,28.058"
+                            transform="translate(0 -18.693)"
+                            fill="#6b6b6b" />
+                </g>
+            </svg>
+        </div>
+        <p>Frontend by Immeo P/S</p>
+        <p>2020</p>
+    </footer>
+    <script src="/assets/clibapp.js"></script></body>
+
+</html>

@@ -5,14 +5,17 @@
   "browser": "app.js",
   "scripts": {
     "start": "webpack-dev-server --open --config ./config/webpack.dev.js",
-    "build": "webpack --config ./config/webpack.prod.js"
+    "build": "webpack --config ./config/webpack.prod.js",
+    "demo": "webpack --config ./config/webpack.demo.js"
   },
   "author": "Morten Fischer - Immeo <mfi@immeo.dk>",
   "devDependencies": {
     "@babel/core": "7.6.4",
     "@babel/preset-env": "7.6.3",
+    "@glidejs/glide": "^3.4.1",
     "babel-loader": "^8.2.2",
     "css-loader": "^3.6.0",
+    "handlebars-webpack-plugin": "^2.2.1",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",

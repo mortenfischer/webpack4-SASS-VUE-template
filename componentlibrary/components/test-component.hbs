@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> partials/clib-head }}
+
+<body>
+    
+    {{> partials/clib-navigation usebackbutton="true"}}
+
+    <div class="body-container">
+        <div class="clib-component">
+            <div class="glide">
+                <section class="clib-select-button__container" data-glide-el="controls[nav]">
+                    <div class="clib-select-button__selected-visual"></div>
+                    <button data-glide-dir="=0" class="clib-button clib-select-button clib-select-button--selected" id="view">View</button>
+                    <button data-glide-dir="=1" class="clib-button clib-select-button" id="api">API</button>
+                    <button data-glide-dir="=2" class="clib-button clib-select-button" id="markup">Markup</button>
+                </section>
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+
+                        <li class="glide__slide">
+                            <!-- change inline styles to adjust element inside window  -->
+                            <div class="clib-window clib-window--demo-active"
+                                     style="max-width: 500px; padding: 60px;">
+                                {{> components/component.markup }}
+                            </div>
+                        </li>
+
+                        <li class="glide__slide">
+                             <section class="clib-api">
+                                <article class="clib-api__container">
+                                    <h1 class="clib-page-title">CreateUser</h1>
+                                    <table class="clib-api__table">
+                                        <tr>
+                                            <th>method</th>
+                                            <th>endpoint</th>
+                                            <th>request body</th>
+                                            <th>response</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="clib-api__table-item--method">
+                                                <div class="clib-api__table-item">POST</div>
+                                            </td>
+                                            <td class="clib-api__table-item--endpoint">
+                                                <div class="clib-api__table-item">/api/customer/create-user/{costumerId}</div>
+                                            </td>
+                                            <td class="clib-api__table-item--request-body">
+                                                <textarea class="clib-api__table-item clib-page-table clib-api__table-text-area"
+                                                        disabled>
+                                                {
+                                                    "customerId": 4565432,
+                                                    "userInformation": {
+                                                        "name": "fsdfsefsef",
+                                                        "email": "morten@grafisch.dk",
+                                                        "mobile": "2342532435",
+                                                        "role": "3"
+                                                    }
+                                                }</textarea>
+                                            </td>
+                                            <td class="clib-api__table-item--response">
+                                                <textarea class="clib-api__table-item clib-page-table clib-api__table-text-area"
+                                                        disabled>
+                                                    {
+                                                        "userDetails" : {
+                                                            "name": "Flemming Brugersen",
+                                                            "email": "flbr@testbruger.dk",
+                                                            "role": "Driftschef",
+                                                            "installations" : [
+                                                                "Taasingegade 21, 1606
+                                                                København V"
+                                                            ]
+                                                        },
+                                                        "userDetails" : {
+                                                            "name": "Flemming Brugersen",
+                                                            "email": "flbr@testbruger.dk",
+                                                            "role": "Driftschef",
+                                                            "installations" : [
+                                                                "Taasingegade 21, 1606
+                                                                København V"
+                                                            ]
+                                                        }
+                                                    }
+                                                </textarea>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </article>
+                                <article class="clib-api__container">
+                                    <h1 class="clib-page-title">CreateUser</h1>
+                                    <table class="clib-api__table">
+                                        <tr>
+                                            <th>method</th>
+                                            <th>endpoint</th>
+                                            <th>request body</th>
+                                            <th>response</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="clib-api__table-item--method">
+                                                <div class="clib-api__table-item">POST</div>
+                                            </td>
+                                            <td class="clib-api__table-item--endpoint">
+                                                <div class="clib-api__table-item">/api/customer/create-user/{costumerId}</div>
+                                            </td>
+                                            <td class="clib-api__table-item--request-body">
+                                                <textarea class="clib-api__table-item clib-page-table clib-api__table-text-area"
+                                                        disabled>
+                                                {
+                                                    "customerId": 4565432,
+                                                    "userInformation": {
+                                                        "name": "fsdfsefsef",
+                                                        "email": "morten@grafisch.dk",
+                                                        "mobile": "2342532435",
+                                                        "role": "3"
+                                                    }
+                                                }</textarea>
+                                            </td>
+                                            <td class="clib-api__table-item--response">
+                                                <textarea class="clib-api__table-item clib-page-table clib-api__table-text-area"
+                                                        disabled>
+                                                    {
+                                                        "userDetails" : {
+                                                            "name": "Flemming Brugersen",
+                                                            "email": "flbr@testbruger.dk",
+                                                            "role": "Driftschef",
+                                                            "installations" : [
+                                                                "Taasingegade 21, 1606
+                                                                København V"
+                                                            ]
+                                                        },
+                                                        "userDetails" : {
+                                                            "name": "Flemming Brugersen",
+                                                            "email": "flbr@testbruger.dk",
+                                                            "role": "Driftschef",
+                                                            "installations" : [
+                                                                "Taasingegade 21, 1606
+                                                                København V"
+                                                            ]
+                                                        }
+                                                    }
+                                                </textarea>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </article>
+                            </section>
+                        </li>
+
+                        <li class="glide__slide">
+                            <section class="clib-markup">
+                                <article>
+                                    <h1 class="clib-page-title">Developer note :</h1>
+                                    <textarea class="clib-page-table clib-markup__short-table copyFromNotes">123123</textarea>
+                                    <button class="clib-button clib-markup__copy-button copyToClipboard"
+                                            id="copyFromNotes">
+                                        <div class="clib-svg-container__button clib-markup__copy-svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 448 512">
+                                                <path d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z" /></svg>
+                                        </div>
+                                        <div class="clib-svg-container__checkmark clib-markup__checkmark-svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" /></svg>
+                                        </div>
+                                        <p class="clib-markup__copy-button-text">copy</p>
+                                    </button>
+                                </article>
+                                <article>
+                                    <h1 class="clib-page-title">Markup to copy :</h1>
+                                    <textarea class="clib-page-table clib-markup__long-table copyFromMarkup">{{> components/component.markup }}</textarea>
+                                    <button class="clib-button clib-markup__copy-button copyToClipboard"
+                                            id="copyFromMarkup">
+                                        <div class="clib-svg-container__button clib-markup__copy-svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 448 512">
+                                                <path d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z" /></svg>
+                                        </div>
+                                        <div class="clib-svg-container__checkmark clib-markup__checkmark-svg">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" /></svg>
+                                        </div>
+                                        <p class="clib-markup__copy-button-text">copy</p>
+                                    </button>
+                                </article>
+                            </section>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> partials/clib-footer }}
+</body>
+
+</html>

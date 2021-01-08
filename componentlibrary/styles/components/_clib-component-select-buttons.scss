@@ -1,0 +1,109 @@
+
+.clib-select-button {
+    position: relative;
+    z-index: 2;
+    padding: 12px 20px;
+    background-color: transparent;
+    font-size: 18px;
+    color: $color-primary;
+    text-align: center;
+    margin: 0 28px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+       margin: 0 10px;
+    }
+
+    &:focus {
+        box-shadow: none!important;
+        outline: none!important;
+    }
+
+    &--selected {
+        color: $color-white;
+        transition: all 0.15s ease-in-out;
+        transition-delay: 0.2s;
+    }
+
+    @keyframes select-btn-animation {
+        0% {
+            border-radius: 4px;
+        }
+        50% {
+            border-radius: 50px;
+            width: 40px;
+        }
+        100% {
+            border-radius: 4px;
+        }
+    }
+
+    &__selected-visual {
+        position: absolute;
+        top: 79px;
+        left: 27px;
+        z-index: -1;
+        height: 45px;
+        width: 80px;
+        background-color: $color-secondary;
+        border-radius: 4px;
+        animation-name: select-btn-animation;
+        animation-duration: 0.4s;
+        transition: all 0.25s ease-in-out;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            top: 50px;
+            left: 11px;
+        }
+
+        &--view {
+            width: 80px;
+            left: 27px;
+            transition: all 0.25s ease-in-out;
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                left: 11px;
+            }
+        }
+
+        &--api {
+            width: 80px;
+            left: 160px;
+            transition: all 0.25s ease-in-out;
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                left: 104px;
+            }
+        }
+
+        &--markup {
+            width: 100px;
+            left: 290px;
+            transition: all 0.25s ease-in-out;
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                left: 200px;
+            }
+        }
+    }
+
+    &__container {
+        width: 400px;
+        display: flex;
+        margin: 0 auto;
+        padding: 80px 0;
+        box-sizing: border-box;
+        position: relative;
+        transition: opacity 0.2s ease-in-out;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: 300px;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+    }
+
+    &:focus {
+        box-shadow: 0 0 2pt 1pt $color-focus;
+        outline: none;
+    }
+}

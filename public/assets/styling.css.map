@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/style.scss"],"names":[],"mappings":"AAAA;AACA;AACA;AACA,kBAAkB","file":"styling.css","sourcesContent":["BODY {\n  color: #00ff99;\n  font-family: \"Helvetica\",sans-serif;\n  font-size: 16px; }\n"],"sourceRoot":""}
