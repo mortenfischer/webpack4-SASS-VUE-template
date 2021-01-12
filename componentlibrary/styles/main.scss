@@ -9,21 +9,24 @@
 // Optional Theme Stylesheet
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
+:root{
+    font-family: Volte,Arial, Helvetica, sans-serif;
+}
 
 span, p {
-    font-family: "Volte-Regular", Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: $color-primary;
     margin: 0;
 }
 
 .clib-button {
     border: none;
-    font-family: 'Volte-Regular', Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
 
 .clib-page-title {
-    font-family: 'Volte-Semibold', Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: $color-primary;
     text-align: center;
     margin-bottom: 30px;
@@ -34,7 +37,7 @@ span, p {
     background-color: transparent;
     border: none;
     resize: none;
-    font-family: 'Volte-Regular', Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
 }
 
@@ -52,7 +55,7 @@ span, p {
     }
 
     &__text {
-        font-family: 'Volte-Medium', Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
         font-weight: 500;
         color: $color-primary;

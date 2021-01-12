@@ -2,7 +2,6 @@ import './styles/main.scss'
 import Glide from '@glidejs/glide'
 
 (function(){
-    console.log("working")
     const copyToClipboardElements = document.querySelectorAll('.copyToClipboard')
     const selectButtonElements = document.querySelectorAll('.clib-select-button')
     const buttonVisual = document.querySelector('.clib-select-button__selected-visual')
@@ -19,14 +18,34 @@ import Glide from '@glidejs/glide'
     }
     
     function copyToClipboard(event) {
-        const copyFromIdentifier = event.currentTarget.id
+        const copyFromIdentifier = event.currentTarget.dataset.copytargetclassname || event.currentTarget.dataset.copytargetsiblingclassname
+
+        const copyTargetIsSibling = !!(event.currentTarget.dataset.copytargetsiblingclassname)
+
         const buttonText = event.currentTarget.querySelector('.clib-markup__copy-button-text')
         const copySVG = event.currentTarget.querySelector('.clib-markup__copy-svg')
         const checkmarkSVG = event.currentTarget.querySelector('.clib-markup__checkmark-svg')
         let originalButtonText = buttonText.innerText
-        const copyText = document.querySelector(`.${copyFromIdentifier}`);
-    
-        copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+        const copyTargetParent = copyTargetIsSibling ? event.currentTarget.parentNode : document
+
+        const copyText = copyTargetParent.querySelector('.'+copyFromIdentifier);
+
+        if(copyText.select){
+            copyText.select();
+        } else {
+            const el = document.createElement('textarea');
+            el.value = copyText.innerHTML;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        }
+
+        
         document.execCommand("copy");
     
         if (buttonText) {
@@ -43,20 +62,17 @@ import Glide from '@glidejs/glide'
     }
     
     function selectButton(htmlElement, buttonVisual) {
-        console.log("click")
         const selectedButtonVisual = `clib-select-button__selected-visual--${htmlElement.id}`
         buttonVisual.className = `clib-select-button__selected-visual ${selectedButtonVisual}`
     
         buttonVisual.classList.remove("clib-select-button__selected-visual");
-        void buttonVisual.offsetWidth;
+
         buttonVisual.classList.add("clib-select-button__selected-visual");
     
         selectButtonElements.forEach(button => {
             button.classList.remove("clib-select-button--selected")
-            button.style.fontFamily = "Volte-Regular"
         })
         htmlElement.classList.add('clib-select-button--selected')
-        setTimeout(function () { htmlElement.style.fontFamily = "Volte-Semibold" }, 300)
     }
     
     copyToClipboardElements.forEach(htmlElement => {
@@ -70,18 +86,17 @@ import Glide from '@glidejs/glide'
             selectButton(htmlElement, buttonVisual)
         })
     })
-    
-    if (selectedButton) {
-        selectedButton.style.fontFamily = "Volte-Semibold"
+
+    if(document.querySelector('.glide')){
+        const glide = new Glide('.glide', {
+            type: 'carousel',
+            perView: 1,
+            focusAt: 'center',
+            dragDistance: false,
+            dragThreshold: 0,
+            touchDistance: false
+        })
+        glide.mount()
     }
     
-    const glide = new Glide('.glide', {
-        type: 'carousel',
-        perView: 1,
-        focusAt: 'center',
-        dragDistance: false,
-        dragThreshold: 0,
-        touchDistance: false
-    })
-    glide.mount()
 })()

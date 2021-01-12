@@ -9,6 +9,7 @@
 
     <div class="body-container">
         <div class="clib-component">
+            <h1 class="clib-component-name">Assets</h1>
             <div class="glide">
                 <section class="clib-select-button__container" data-glide-el="controls[nav]">
                     <div class="clib-select-button__selected-visual"></div>
@@ -152,7 +153,7 @@
                                     <h1 class="clib-page-title">Developer note :</h1>
                                     <textarea class="clib-page-table clib-markup__short-table copyFromNotes">123123</textarea>
                                     <button class="clib-button clib-markup__copy-button copyToClipboard"
-                                            id="copyFromNotes">
+                                            data-copytargetclassname="copyFromNotes">
                                         <div class="clib-svg-container__button clib-markup__copy-svg">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                  viewBox="0 0 448 512">
@@ -170,7 +171,7 @@
                                     <h1 class="clib-page-title">Markup to copy :</h1>
                                     <textarea class="clib-page-table clib-markup__long-table copyFromMarkup">{{> components/component.markup }}</textarea>
                                     <button class="clib-button clib-markup__copy-button copyToClipboard"
-                                            id="copyFromMarkup">
+                                            data-copytargetclassname="copyFromMarkup">
                                         <div class="clib-svg-container__button clib-markup__copy-svg">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                  viewBox="0 0 448 512">

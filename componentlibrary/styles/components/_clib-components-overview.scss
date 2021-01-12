@@ -47,7 +47,7 @@
         display: flex;
         height: fit-content;
         font-weight: 500;
-        font-family: 'Volte-Medium', Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
 
         @media screen and (max-width: $breakpoint-tablet) {
             width: calc((100% / 2) - 20px);
